@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script language="javascript" src="http://tts.itri.org.tw/TTScript/Text2SpeechJsApiV2.php?key=YourLicense"></script>
+    <meta charset="utf-8" />
+    <title>test</title>
+    <style>
+        body {
+            margin: 0px
+        }
+        
+        h2 {
+            text-align: center
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 0px 15%;
+        }
+        
+        #add {
+            outline: none;
+            color: white;
+            border: solid 1px;
+            border-radius: 6px;
+            background: royalblue;
+            height: 35px;
+            padding: 0px 10px;
+            margin-right: 5px;
+        }
+        
+        .re,
+        .de {
+            outline: none;
+            color: white;
+            border: solid 1px;
+            border-radius: 6px;
+            height: 25px;
+        }
+        
+        .re {
+            background: seagreen;
+        }
+        
+        .de {
+            background: crimson;
+        }
+        
+        .re:active {
+            background: green;
+        }
+        
+        .de:active {
+            background: red;
+        }
+        
+        button:active {
+            background: navy;
+        }
+        
+        #m td {
+            height: 35px;
+        }
+        
+        #m tr:first-child td {
+            border: solid 1px gray;
+            height: 45px;
+        }
+        
+        #m tr td {
+            border: solid 1px gray;
+            text-align: center;
+        }
+        
+        #m tr:not(:nth-child(2)) td:first-child {
+            text-align: left;
+        }
+        
+        #m tr:not(:nth-child(2)) td:first-child {
+            width: 60%;
+            text-indent: 10px;
+        }
+        
+        #m tr td:nth-child(2) {
+            width: 30%;
+        }
+        
+        #m tr td:last-child {
+            width: 10%;
+        }
+        
+        #m tr:nth-child(2) {
+            font-weight: bold;
+        }
+        
+        div {
+            margin: 40px;
+        }
+        
+        div table {
+            width: 170px;
+            font-size: 18px;
+            font-family: monospace;
+            border-collapse: collapse;
+            background: gray;
+            border-radius: 5px;
+        }
+        
+        div td {
+            text-align: center;
+            width: 20%;
+            height: 30px;
+        }
+        
+        div td:first-child div {
+            background: royalblue;
+            color: white;
+        }
+        
+        div td div {
+            margin: 0px;
+            color: royalblue;
+            background: white;
+            height: 100%;
+            line-height: 30px;
+        }
+        
+        div td div:active {
+            background: navy;
+        }
+        
+        div td:first-child div {
+            width: calc(100% - 1px);
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 5px;
+            margin-left: 1px;
+        }
+        
+        div td:last-child div {
+            width: calc(100% - 1px);
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>留言板</h2>
+    <script language="javascript" src="http://tts.itri.org.tw/TTScript/Text2SpeechJsApiV2.php?key=YourLicense"></script>
+    <script language="javascript" src="http://tts.itri.org.tw/other/webttstest.js"></script>
+    <div id="content">
+        <div id="mute">不想聽到的內容</div>
+        <div class="mute">不想聽到的內容</div>
+        將會聽到的內容
+    </div>
+    <script language="javascript">
+        var tts = new TTS();
+        tts.muteTag = "id:mute|class:mute";
+        tts.PlayerSet.hidden = false;
+        tts.PlayerSet.width = 100;
+        tts.PlayerSet.height = 30;
+        tts.ConvertInit("id:content", "media", "Bruce", "100", "0", "0", "0", "5");
+    </script>
+    <table id="m">
+        <tr>
+            <td colspan="3" style="text-align: right;">
+                <button id="add">新增留言</button>
+            </td>
+        </tr>
+        <tr>
+            <td>主題</td>
+            <td>發文者</td>
+            <td>功能</td>
+        </tr>
+        <tr>
+            
+            <td>今天天氣真好</td>
+            <td>小明</td>
+            <td>
+                <button class="re">回覆</button>
+                <button class="de">刪除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>今天天氣真好</td>
+            <td>小明</td>
+            <td>
+                <button class="re">回覆</button>
+                <button class="de">刪除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>今天天氣真好</td>
+            <td>小明</td>
+            <td>
+                <button class="re">回覆</button>
+                <button class="de">刪除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>今天天氣真好</td>
+            <td>小明</td>
+            <td>
+                <button class="re">回覆</button>
+                <button class="de">刪除</button>
+            </td>
+        </tr>
+    </table>
+    <div align="center">
+        <table>
+            <tr>
+                <td>
+                    <div>1</div>
+                </td>
+                <td>
+                    <div>2</div>
+                </td>
+                <td>
+                    <div>3</div>
+                </td>
+                <td>
+                    <div>4</div>
+                </td>
+                <td>
+                    <div>5</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
